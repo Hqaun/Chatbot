@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LangChain Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; }
+        form { margin-bottom: 20px; }
+        .chat-box { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>LangChain Chatbot</h1>
+    <form method="post">
+        <input type="text" name="user_input" placeholder="Nhập câu hỏi..." required>
+        <button type="submit">Gửi</button>
+    </form>
+
+    {% if user_input %}
+        <div class="chat-box">
+            <strong>Bạn:</strong> {{ user_input }} <br>
+            <strong>Bot:</strong> {{ bot_response }}
+        </div>
+    {% endif %}
+</body>
+</html>
